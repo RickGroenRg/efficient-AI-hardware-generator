@@ -1,0 +1,34 @@
+operation_to_hardware_unit:
+  linear_mac: MAC
+  conv_mac: MAC
+  bias_add: ADD
+  residual_add: ADD
+  relu: NON_LINEAR
+  tanh: NON_LINEAR
+  sigmoid: NON_LINEAR
+  gelu: NON_LINEAR
+  batchnorm: NORMALIZATION
+  layernorm: NORMALIZATION
+  maxpool: POOLING
+  avgpool: POOLING
+  flatten: DATA_MOVEMENT
+  reshape: DATA_MOVEMENT
+  transpose: DATA_MOVEMENT
+  unsupported: UNSUPPORTED
+supported_module_types:
+  - Linear
+  - Conv1d
+  - Conv2d
+  - ReLU
+  - Tanh
+  - Sigmoid
+  - GELU
+  - BatchNorm1d
+  - BatchNorm2d
+  - LayerNorm
+  - MaxPool1d
+  - MaxPool2d
+  - AvgPool1d
+  - AvgPool2d
+  - Flatten
+  - Identity

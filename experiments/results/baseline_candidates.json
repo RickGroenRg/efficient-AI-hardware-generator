@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "seed": 7,
+    "budget": 50,
+    "operation_analysis_source": "experiments/results/sample_model_ops.json"
+  },
+  "candidates": [
+    {
+      "candidate_id": "baseline_000",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 8,
+      "tile_m": 16,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_001",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 4,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_002",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 8,
+      "tile_m": 128,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_003",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 128,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_004",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 2,
+      "tile_m": 16,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_005",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 1,
+      "tile_m": 32,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_006",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_007",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 2,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_008",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_009",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 8,
+      "tile_m": 128,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_010",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 8,
+      "tile_m": 64,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_011",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 2,
+      "tile_m": 16,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_012",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 4,
+      "tile_m": 128,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_013",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 1,
+      "tile_m": 128,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_014",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 8,
+      "tile_m": 128,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_015",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 16,
+      "tile_m": 64,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_016",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 8,
+      "tile_m": 128,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_017",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 16,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_018",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 16,
+      "tile_m": 128,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_019",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 4,
+      "tile_m": 16,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_020",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_021",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 4,
+      "tile_m": 32,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_022",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_023",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 16,
+      "tile_m": 64,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_024",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 4,
+      "tile_m": 128,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_025",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 2,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_026",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 2,
+      "tile_m": 16,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_027",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 4,
+      "tile_m": 64,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_028",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 16,
+      "tile_m": 64,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_029",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_030",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 128,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_031",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_032",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 8,
+      "tile_m": 32,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_033",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 1,
+      "tile_m": 16,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_034",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_035",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 1,
+      "tile_m": 32,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_036",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 4,
+      "tile_m": 64,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_037",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 1,
+      "tile_m": 128,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_038",
+      "unroll_factor": 8,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 4,
+      "tile_m": 16,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_039",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 4,
+      "tile_m": 64,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_040",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 1,
+      "tile_m": 32,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_041",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 16,
+      "tile_m": 16,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_042",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 4,
+      "tile_m": 64,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_043",
+      "unroll_factor": 4,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 16,
+      "tile_m": 64,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_044",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 2,
+      "tile_m": 128,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_045",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 4,
+      "array_partition_factor": 8,
+      "tile_m": 64,
+      "tile_n": 16
+    },
+    {
+      "candidate_id": "baseline_046",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 64,
+      "tile_n": 32
+    },
+    {
+      "candidate_id": "baseline_047",
+      "unroll_factor": 16,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 8,
+      "tile_m": 64,
+      "tile_n": 64
+    },
+    {
+      "candidate_id": "baseline_048",
+      "unroll_factor": 1,
+      "pipeline_ii_target": 1,
+      "array_partition_factor": 1,
+      "tile_m": 32,
+      "tile_n": 128
+    },
+    {
+      "candidate_id": "baseline_049",
+      "unroll_factor": 2,
+      "pipeline_ii_target": 2,
+      "array_partition_factor": 2,
+      "tile_m": 128,
+      "tile_n": 16
+    }
+  ]
+}

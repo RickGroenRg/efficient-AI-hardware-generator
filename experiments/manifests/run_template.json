@@ -1,0 +1,17 @@
+{
+  "run_id": "example_run_001",
+  "model": {
+    "model_file": "scripts/sample_model.py",
+    "model_class": "SimpleFCNet",
+    "input_shape": [1, 128]
+  },
+  "operation_analysis_artifact": "experiments/results/sample_model_ops.json",
+  "search": {
+    "method": "baseline",
+    "budget": 50,
+    "seed": 7
+  },
+  "objective_config": "configs/objective.yaml",
+  "search_space_config": "configs/search_space.yaml",
+  "notes": "Template manifest"
+}

@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "model_file": "scripts\\sample_model.py",
+    "model_class": "SimpleFCNet",
+    "input_shape": [
+      1,
+      128
+    ],
+    "analyzer_version": "0.1.0"
+  },
+  "layers": [
+    {
+      "layer_name": "fc1",
+      "module_type": "Linear",
+      "operation_type": "linear_mac",
+      "mapped_hardware_unit": "MAC",
+      "operation_count": 8192,
+      "notes": "Linear MAC operations"
+    },
+    {
+      "layer_name": "fc1",
+      "module_type": "Linear",
+      "operation_type": "bias_add",
+      "mapped_hardware_unit": "ADD",
+      "operation_count": 64,
+      "notes": "Linear bias additions"
+    },
+    {
+      "layer_name": "act1",
+      "module_type": "ReLU",
+      "operation_type": "relu",
+      "mapped_hardware_unit": "NON_LINEAR",
+      "operation_count": 64,
+      "notes": "ReLU elementwise non-linearity"
+    },
+    {
+      "layer_name": "fc2",
+      "module_type": "Linear",
+      "operation_type": "linear_mac",
+      "mapped_hardware_unit": "MAC",
+      "operation_count": 640,
+      "notes": "Linear MAC operations"
+    },
+    {
+      "layer_name": "fc2",
+      "module_type": "Linear",
+      "operation_type": "bias_add",
+      "mapped_hardware_unit": "ADD",
+      "operation_count": 10,
+      "notes": "Linear bias additions"
+    }
+  ],
+  "totals": {
+    "operation_type_totals": {
+      "linear_mac": 8832,
+      "bias_add": 74,
+      "relu": 64
+    },
+    "hardware_unit_totals": {
+      "MAC": 8832,
+      "ADD": 74,
+      "NON_LINEAR": 64
+    },
+    "unsupported_layers": []
+  }
+}

@@ -1,0 +1,17 @@
+primary_objective: latency
+latency_unit: cycles
+feasibility_constraints:
+  max_lut: 30000
+  max_ff: 60000
+  max_bram: 140
+  max_dsp: 220
+required_metrics:
+  - latency
+  - lut
+  - ff
+  - bram
+  - dsp
+  - estimated_clock_mhz
+comparison_budget:
+  baseline_candidates: 50
+  ai_candidates: 50
