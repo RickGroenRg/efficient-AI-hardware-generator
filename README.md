@@ -5,11 +5,14 @@ Repository for a reproducible proof of concept that tests whether AI-guided desi
 ## Research Goal
 Investigate whether AI can reduce hardware design time by generating better candidate designs under fixed constraints.
 
-Primary metrics:
+Primary v1 metrics:
 - Inference latency
 - Throughput
-- Energy (later phase)
 - Hardware resource usage (LUT, FF, BRAM, DSP)
+
+Deferred metrics (later phase):
+- Measured power
+- Energy per inference
 
 ## Critical Rule
 Every experiment must start with software-model operation analysis from a Python model.
@@ -22,10 +25,46 @@ This mandatory step must:
 No baseline or AI search run is valid if this artifact is missing.
 
 ## Scope of v1
-- Model family: simple fully connected network.
+- Workload A (smoke test): simple fully connected network.
+- Workload B (representative test): larger fully connected network or small Conv2d block.
 - Target platform class: PYNQ-Z2 or ZedBoard class.
 - Tool flow in phase 1: Vitis HLS only.
 - Comparison rule: baseline and AI must evaluate equal candidate counts.
+
+## Scope Tiers
+### Tier A: HLS-only exploration
+- HLS synthesis metrics are used for optimization and comparison.
+- No claims about board-level power or final deployed performance.
+
+### Tier B: implementation realism
+- Vivado implementation is included for top candidates.
+- Timing closure and resource feasibility are verified post-implementation.
+
+### Tier C: board validation
+- On-board runtime and power measurements are collected.
+- Energy and power claims are only valid in this tier.
+
+## Fixed Targets and Acceptance Gates
+The following gates define v1 completion criteria.
+
+1. Reproducibility gate:
+- Same manifest and seed must reproduce feasibility outcomes.
+- Re-run latency variation target: within 2 percent on identical toolchain.
+
+2. Fairness gate:
+- Baseline and AI must use identical search space, constraints, and evaluator.
+- Candidate budgets must be equal, default 50 vs 50.
+
+3. Feasibility gate:
+- Minimum feasible-candidate rate target: 70 percent for each method.
+
+4. Performance gate:
+- Report both best feasible latency and median feasible latency.
+- AI improvement target for median feasible latency: at least 10 percent versus baseline under equal budget.
+
+5. Runtime gate:
+- Total wall-time per 50-candidate run must be recorded.
+- Time-to-first-feasible candidate must be reported.
 
 ## Repository Structure
 - docs: project contracts and evaluation protocols.
@@ -62,6 +101,11 @@ python scripts/run_baseline.py --operation-analysis experiments/results/sample_m
 - Freeze fairness protocol.
 - Freeze model-operation analysis contract.
 
+### Phase 0.5: Benchmark Hardening
+- Freeze Workload A and Workload B definitions.
+- Freeze target clock and resource limits.
+- Verify that unsupported operations are explicitly reported.
+
 ### Phase 1: Deterministic Baseline Pipeline
 - Add HLS evaluator and report parser.
 - Connect baseline candidates to synthesis and metrics extraction.
@@ -73,9 +117,13 @@ python scripts/run_baseline.py --operation-analysis experiments/results/sample_m
 ### Phase 3: Validation and Readout
 - Aggregate results, compare baseline vs AI, and report limitations.
 
+### Phase 4: Hardware Validation
+- Deploy selected candidates to board.
+- Measure runtime and power on hardware.
+- Report estimate-versus-measured gaps.
+
 ## Notes
 - Vivado implementation and FPGA on-board measurements are intentionally deferred until HLS-only flow is stable.
 - Model optimizations such as quantization and pruning are out of scope for the first proof of concept.
-
-
+- Energy and power claims are out of scope until hardware validation is completed
 
